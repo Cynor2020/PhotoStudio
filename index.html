@@ -146,120 +146,261 @@
 
     <!-- About Section -->
     <section id="about" class="py-20 px-4 bg-blue-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">About Us</h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda" alt="Photographer at work" class="rounded-lg shadow-xl w-full h-auto">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-4">Capturing Your Special Moments</h3>
-                    <p class="text-lg text-gray-700 mb-4">With over 8 years of experience in wedding photography and videography, I specialize in creating timeless memories that you'll cherish forever. My approach combines artistic vision with technical expertise to deliver stunning visuals that tell your unique love story.</p>
-                    <p class="text-lg text-gray-700">Based in Mumbai but available worldwide, I've had the privilege of documenting over 200 weddings across India and internationally. Each wedding is unique, and I strive to capture the authentic emotions and details that make your day special.</p>
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+            <span class="animated-title inline-block">Meet The Founder</span>
+        </h2>
+        
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <!-- Circular Founder Photo with Glow -->
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative founder-photo-container w-64 h-64">
+                    <div class="absolute inset-0 rounded-full glow-border animate-spin-slow"></div>
+                    <div class="absolute inset-1 rounded-full bg-white z-10 flex items-center justify-center overflow-hidden">
+                        <img src="./sagar.png" 
+                             alt="Sagar, Founder of Stories by Sagar" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -inset-2 rounded-full pulse-ring"></div>
                 </div>
             </div>
+            
+            <!-- Founder Bio -->
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-semibold mb-2 text-pink-600">Sagar Somanath Navale</h3>
+                <p class="text-lg font-medium text-gray-500 mb-4">Founder & Creative Director</p>
+                
+                <div class="mb-6">
+                    <p class="text-lg text-gray-700 mb-3">
+                        "Photography isn't just my profession - it's my way of freezing emotions in time."
+                    </p>
+                    <p class="text-gray-600">
+                        With 8+ years capturing love stories across India, I blend technical precision with artistic vision to create memories that last generations.
+                    </p>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            📸
+                        </div>
+                        <span>200+ Weddings Captured</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            🌍
+                        </div>
+                        <span>Available Worldwide</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                            🏆
+                        </div>
+                        <span>5 Industry Awards</span>
+                    </div>
+                </div>
+                
+                <button class="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    Book Consultation
+                </button>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <style>
+        /* Animated Title */
+        .animated-title {
+            background: linear-gradient(90deg, #ec4899, #3b82f6, #ec4899);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        
+        /* Circular Photo Effects */
+        .founder-photo-container {
+            width: 18rem;
+            height: 18rem;
+            position: relative;
+        }
+        
+        .glow-border {
+            background: conic-gradient(
+                #ec4899, #3b82f6, #10b981, #f59e0b, #ec4899
+            );
+            filter: blur(10px);
+            opacity: 0.7;
+        }
+        
+        .animate-spin-slow {
+            animation: spin 8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .pulse-ring {
+            border: 2px solid rgba(236, 72, 153, 0.5);
+            animation: pulse 3s ease-out infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.15); opacity: 0; }
+        }
+        
+        /* Hover Effects */
+        .founder-photo-container:hover .glow-border {
+            opacity: 0.9;
+            filter: blur(12px);
+        }
+        
+        .founder-photo-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Our Services</h2>
-            <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16">Comprehensive photography and videography packages tailored to your needs</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-4xl mb-4 text-pink-600">📷</div>
-                    <h3 class="text-2xl font-semibold mb-4">Wedding Photography</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Full day coverage (12+ hours)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>500+ high-resolution edited images</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Online gallery with download access</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Pre-wedding consultation</span>
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <span class="text-2xl font-bold">₹85,000</span>
-                        <span class="text-gray-500 ml-2">+ taxes</span>
-                    </div>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-4xl mb-4 text-pink-600">🎥</div>
-                    <h3 class="text-2xl font-semibold mb-4">Cinematic Videography</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Full day coverage with 2 cameras</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>5-7 minute highlight film</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Full ceremony documentation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Drone footage (where permitted)</span>
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <span class="text-2xl font-bold">₹1,20,000</span>
-                        <span class="text-gray-500 ml-2">+ taxes</span>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-                    <div class="text-4xl mb-4 text-pink-600">✨</div>
-                    <h3 class="text-2xl font-semibold mb-4">Complete Package</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Photography + Videography</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>2 photographers + 1 videographer</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Pre-wedding shoot included</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="mr-2">✓</span>
-                            <span>Premium leather album</span>
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <span class="text-2xl font-bold">₹1,75,000</span>
-                        <span class="text-gray-500 ml-2">+ taxes</span>
-                    </div>
-                </div>
+    <div class="max-w-6xl mx-auto">
+        <!-- Animated Title -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">
+            <span class="animated-title inline-block">Our Capturing Services</span>
+        </h2>
+        <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16">Preserving your precious moments with artistic photography & cinematic storytelling</p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 - Wedding Photography -->
+            <div class="service-card group">
+                <div class="text-4xl mb-4 text-pink-600 transform group-hover:rotate-6 group-hover:scale-110 transition duration-300">💍</div>
+                <h3 class="text-2xl font-semibold mb-4">Wedding Photography</h3>
+                <p class="text-gray-700">Complete coverage of your special day with artistic shots and candid moments</p>
             </div>
             
-            <div class="text-center mt-16">
-                <a href="#contact" class="inline-block bg-pink-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-pink-700 transition duration-300">
-                    Customize Your Package
-                </a>
+            <!-- Service 2 - Cinematic Videography -->
+            <div class="service-card group">
+                <div class="text-4xl mb-4 text-pink-600 transform group-hover:-rotate-6 group-hover:scale-110 transition duration-300">🎬</div>
+                <h3 class="text-2xl font-semibold mb-4">Cinematic Videography</h3>
+                <p class="text-gray-700">Storytelling through motion with professional equipment and editing</p>
+            </div>
+            
+            <!-- Service 3 - Complete Package -->
+            <div class="service-card group">
+                <div class="text-4xl mb-4 text-pink-600 transform group-hover:rotate-6 group-hover:scale-110 transition duration-300">✨</div>
+                <h3 class="text-2xl font-semibold mb-4">Complete Package</h3>
+                <p class="text-gray-700">Photography + Videography combo for comprehensive coverage</p>
+            </div>
+            
+            <!-- Service 4 - Pre-Wedding Shoot -->
+            <div class="service-card group">
+                <div class="text-4xl mb-4 text-pink-600 transform group-hover:-rotate-6 group-hover:scale-110 transition duration-300">🌄</div>
+                <h3 class="text-2xl font-semibold mb-4">Pre-Wedding Shoot</h3>
+                <p class="text-gray-700">Romantic outdoor sessions at scenic locations in and around Nashik</p>
+            </div>
+            
+            <!-- Service 5 - Maternity Shoot -->
+            <div class="service-card group">
+                <div class="text-4xl mb-4 text-pink-600 transform group-hover:rotate-6 group-hover:scale-110 transition duration-300">👶</div>
+                <h3 class="text-2xl font-semibold mb-4">Maternity Shoot</h3>
+                <p class="text-gray-700">Celebrate this beautiful phase with elegant portrait sessions</p>
+            </div>
+            
+            <!-- Service 6 - Portfolio Shoot -->
+            <div class="service-card group">
+                <div class="text-4xl mb-4 text-pink-600 transform group-hover:-rotate-6 group-hover:scale-110 transition duration-300">📸</div>
+                <h3 class="text-2xl font-semibold mb-4">Portfolio Shoot</h3>
+                <p class="text-gray-700">Professional images for models, actors, and professionals</p>
             </div>
         </div>
-    </section>
+        
+        <div class="text-center mt-16">
+            <a href="#contact" class="inline-block bg-pink-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-pink-700 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Customize Your Package
+            </a>
+        </div>
+    </div>
+    
+    <style>
+        /* Animated Title */
+        .animated-title {
+            background: linear-gradient(90deg, #ec4899, #f472b6, #ec4899);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+        
+        /* Service Card */
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(236, 72, 153, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ec4899, #f472b6);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -10px rgba(236, 72, 153, 0.2);
+            border-color: rgba(236, 72, 153, 0.2);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card h3 {
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        
+        .service-card:hover h3 {
+            color: #ec4899;
+        }
+        
+        .service-card p {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .service-card:hover p {
+            transform: translateY(-5px);
+        }
+    </style>
+</section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-20 px-4 bg-gray-50">
